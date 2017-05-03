@@ -1,15 +1,16 @@
+// import libarary
 import React from 'react';
-import {View, Text} from 'react-native';
+import { Text, View } from 'react-native';
 
-const Header = ({title}) => {
-    const { headerContainer, titleStyle } = styles;
+// make a Component
+const Header = (props) => {
+    const {titleStyle, headerContainer} = styles;
     return (
         <View style={headerContainer}>
-            <Text style={titleStyle}>{title}</Text>
+            <Text style={titleStyle}>{props.title}</Text>
         </View>
     );
 };
-
 const styles = {
     headerContainer: {
         paddingTop: 15,
@@ -27,6 +28,9 @@ const styles = {
         fontSize: 20,
         color: '#FFF'
     }
+
 };
 
-export default Header;
+
+// make the component availabe to other parts of the app
+export {Header};

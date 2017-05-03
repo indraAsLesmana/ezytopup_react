@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, TextInput} from 'react-native';
 import LoginForm from './LoginForm';
-import Button from './Button';
+import {Button} from './common';
 
 const LoginDetail = () => {
     return (
@@ -17,10 +17,14 @@ const LoginDetail = () => {
                     style={styles.textInputStyle}/>
             </View>
             <View style={styles.containerStyle}>
-                <Button buttonName={'Login'}/>
+                <Button>
+                    Login
+                </Button>
             </View>
             <View style={styles.containerStyle}>
-                <Button buttonName={'Sign up'}/>
+                <Button>
+                    Sign up
+                </Button>
             </View>
         </LoginForm>
     );
